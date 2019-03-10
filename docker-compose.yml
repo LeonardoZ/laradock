@@ -331,6 +331,7 @@ services:
         - "${MYSQL_PORT}:3306"
       networks:
         - backend
+      command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci','--default-authentication-plugin=mysql_native_password']
 
 ### Percona ################################################
     percona:
